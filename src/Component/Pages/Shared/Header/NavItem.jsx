@@ -16,7 +16,7 @@ const NavItem = () => {
         <li className=' text-white font-[Inter]'><a>Item 3</a></li>
     </>
     return (
-        <div className="navbar rounded" style={{background: 'rgba(21, 21, 21, 0.5)'}} >
+        <div className="navbar rounded fixed z-10 bg-black bg-opacity-30 max-w-screen-lg" >
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
