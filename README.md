@@ -21,3 +21,7 @@ location : <a href='https://github.com/leandrowd/react-responsive-carousel'> htt
  <h2>code</h2>
 
   <a href='https://codesandbox.io/p/sandbox/sr0tpk?file=%2Fsrc%2FApp.jsx%3A1%2C1'> https://codesandbox.io/p/sandbox/sr0tpk?file=%2Fsrc%2FApp.jsx%3A1%2C1</a>
+
+6. uses css paraliax
+
+  <a href='https://www.w3schools.com/howto/howto_css_parallax.asp'>https://www.w3schools.com/howto/howto_css_parallax.asp</a>
