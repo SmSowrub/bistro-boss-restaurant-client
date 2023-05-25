@@ -25,3 +25,18 @@ location : <a href='https://github.com/leandrowd/react-responsive-carousel'> htt
 6. uses css paraliax
 
   <a href='https://www.w3schools.com/howto/howto_css_parallax.asp'>https://www.w3schools.com/howto/howto_css_parallax.asp</a>
+
+  7. react rating
+  <a href='https://react-rating.onrender.com/#basic_usage_ro'>https://react-rating.onrender.com/#basic_usage_ro</a>
+
+ Usage
+1. Import CSS and Rating component
+   <h6>pnpm add @smastrom/react-rating</h6>
+   <h6>yarn add @smastrom/react-rating</h6>
+   <h6>npm i @smastrom/react-rating</h6>
+
+   Usage
+1. Import CSS and Rating component
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
