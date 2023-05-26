@@ -45,3 +45,8 @@ import '@smastrom/react-rating/style.css'
 instal : npm i react-helmet-async
 path:
 <a href='https://www.npmjs.com/package/react-helmet-async' >https://www.npmjs.com/package/react-helmet-async</a>
+
+11. uses react parallax
+instal : npm i react-parallax
+path :
+<a href='https://www.npmjs.com/package/react-parallax' >https://www.npmjs.com/package/react-parallax</a>
