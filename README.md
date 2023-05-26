@@ -50,3 +50,9 @@ path:
 instal : npm i react-parallax
 path :
 <a href='https://www.npmjs.com/package/react-parallax' >https://www.npmjs.com/package/react-parallax</a>
+12. uses react Tabs
+instal : npm install --save react-tabs
+path :
+<a href='https://github.com/reactjs/react-tabs' >https://github.com/reactjs/react-tabs</a>
+
+12. 

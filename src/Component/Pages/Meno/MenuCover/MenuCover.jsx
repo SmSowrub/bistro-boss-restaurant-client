@@ -16,7 +16,7 @@ const MenuCover = ({img, title, subTitle}) => {
                         <div className="max-w-md">
                             <h1 className="text-5xl font-bold mb-5 font-[Cinzel] text-[#FFFFFF]">{title}</h1>
                             <p className="mb-5 font-[Cinzel] text-[#FFFFFF]">{subTitle}</p>
-                            <button className="btn btn-primary">Get Started</button>
+                            
                         </div>
                     </div>
                 </div>
