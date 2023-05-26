@@ -6,6 +6,8 @@ const NavItem = () => {
         <li className=' text-white font-[Inter]'><Link to='/'>Home</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/menu'>Menu</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/order/salad'>Order Food</Link></li>
+        <li className=' text-white font-[Inter]'><Link to='/signup'>SignUp</Link></li>
+        <li className=' text-white font-[Inter]'><Link to='/Login'>Login</Link></li>
         
     </>
     return (

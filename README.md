@@ -50,9 +50,14 @@ path:
 instal : npm i react-parallax
 path :
 <a href='https://www.npmjs.com/package/react-parallax' >https://www.npmjs.com/package/react-parallax</a>
+
 12. uses react Tabs
 instal : npm install --save react-tabs
 path :
 <a href='https://github.com/reactjs/react-tabs' >https://github.com/reactjs/react-tabs</a>
+13. uses React Simple Captcha
+instal : npm install react-simple-captcha
+path :
+<a href='https://github.com/masroorejaz/react-simple-captcha' >https://github.com/masroorejaz/react-simple-captcha</a>
 
 12. 
