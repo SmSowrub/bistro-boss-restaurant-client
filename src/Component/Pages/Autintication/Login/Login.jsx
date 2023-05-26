@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 const Login = () => {
+    const [disabled, setDisabled]=useState(true)
+    useEffect(()=>{
+        loadCaptchaEnginge(6)
+    },[])
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+    }
+
+    const handleValidateCaptcha =(e)=>{
+        const user_captcha_value =e.target.value;
+        if(validateCaptcha(user_captcha_value)==true){
+            setDisabled(false)
+        }
+        else{
+            setDisabled(true)
+        }
+        console.log(user_captcha_value);
     }
     return (
         <div>
@@ -40,15 +55,15 @@ const Login = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    {/* <LoadCanvasTemplate /> */}
+                                    <LoadCanvasTemplate />
                                 </label>
-                                {/* onBlur={handleValidateCaptcha}  */}
-                                <input type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
+                               
+                                <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
 
                             </div>
                             <div className="form-control mt-6">
                                 {/* disabled={disabled} */}
-                                <input  className="btn btn-primary" type="submit" value="Login" />
+                                <input disabled={disabled}  className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
                         <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>

@@ -42,7 +42,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-control mt-6">
                                 {/* disabled={disabled} */}
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn btn-primary" type="submit" value="SignUp" />
                             </div>
                         </form>
                         <p><small>New Here? <Link to="/Login">You have an account</Link> </small></p>
