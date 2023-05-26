@@ -1,19 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavItem = () => {
     const menuItem = <>
-        <li className=' text-white font-[Inter]'><a>Item 1</a></li>
-        <li tabIndex={0}>
-            <a className="justify-between text-white font-[Inter]">
-                Parent
-                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </a>
-            <ul className="p-2 text-white font-[Inter]">
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-            </ul>
-        </li>
-        <li className=' text-white font-[Inter]'><a>Item 3</a></li>
+        <li className=' text-white font-[Inter]'><Link to='/'>Home</Link></li>
+        <li className=' text-white font-[Inter]'><Link to='/menu'>Menu</Link></li>
+        
     </>
     return (
         <div className="navbar rounded fixed z-10 bg-black bg-opacity-30 max-w-screen-lg" >
@@ -27,7 +19,7 @@ const NavItem = () => {
                     </ul>
                 </div>
                 <div className='leading-3'>
-                    <a className="text-xl font-bold font-[Cinzel] text-[#FFFFFF]">BISTRO BOSS</a><br />
+                    <Link to='/' className="text-xl font-bold font-[Cinzel] text-[#FFFFFF]">BISTRO BOSS</Link><br />
                     <small className='font-[Cinzel] text-[#FFFFFF]'>R E S T A U R A N T</small>
                 </div>
             </div>

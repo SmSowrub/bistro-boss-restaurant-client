@@ -30,13 +30,18 @@ location : <a href='https://github.com/leandrowd/react-responsive-carousel'> htt
   <a href='https://react-rating.onrender.com/#basic_usage_ro'>https://react-rating.onrender.com/#basic_usage_ro</a>
 
  Usage
-1. Import CSS and Rating component
+8. Import CSS and Rating component
    <h6>pnpm add @smastrom/react-rating</h6>
    <h6>yarn add @smastrom/react-rating</h6>
    <h6>npm i @smastrom/react-rating</h6>
 
    Usage
-1. Import CSS and Rating component
+9. Import CSS and Rating component
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+
+10. uses react-helmet-async
+instal : npm i react-helmet-async
+path:
+<a href='https://www.npmjs.com/package/react-helmet-async' >https://www.npmjs.com/package/react-helmet-async</a>

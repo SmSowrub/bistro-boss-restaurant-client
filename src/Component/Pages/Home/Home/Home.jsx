@@ -6,10 +6,14 @@ import Featured from '../Featured/Featured';
 import Testimonials from '../Testimonials/Testimonials';
 import CHEFRECOMMENDS from '../CHEFRECOMMENDS/CHEFRECOMMENDS';
 import BistroBoss from '../BistroBoss/BistroBoss';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title className="text-xl font-bold font-[Cinzel] text-[#FFFFFF]">BISTRO BOSS | HOME</title>
+            </Helmet>
             <Banner></Banner>
             <Category></Category>
             <BistroBoss></BistroBoss>
