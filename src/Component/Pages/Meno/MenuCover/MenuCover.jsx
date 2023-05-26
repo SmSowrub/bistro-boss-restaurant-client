@@ -4,8 +4,6 @@ import { Parallax, Background } from 'react-parallax';
 const MenuCover = ({img, title, subTitle}) => {
     return (
         <div>
-           
-            {/* <button className="btn btn-outline border-0 border-b-4 mt-4 flex justify-center mb-10 mx-auto items-center"> ORDER YOUR FAVOURITE FOOD</button> */}
             <Parallax
                 blur={{ min: -50, max: 50 }}
                 bgImage={img}

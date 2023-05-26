@@ -2,25 +2,34 @@ import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import MenuCover from '../MenuCover/MenuCover';
 import cover from '../../../../assets/menu/banner3.jpg'
-import MenuItem from '../../Shared/MenuItem/MenuItem';
-import PopularMenu from '../../Home/PopulerMenu/PopularMenu';
+import SectionTitle from '../../../SectionTitle/SectionTitle';
+import UseHooks from '../../../../Hooks/Usehooks';
+import MenuCategory from '../MenuCategory/MenuCategory';
+
+import Dessert from '../../../../assets/menu/dessert-bg.jpeg'
+import Pizza from '../../../../assets/menu/pizza-bg.jpg'
+import Salad from '../../../../assets/menu/salad-bg.jpg'
+import Soup from '../../../../assets/menu/soup-bg.jpg'
 const Menu = () => {
+    const [menu] =UseHooks()
+    const offer = menu.filter(item=>item.category === 'offered')
+    const dessert = menu.filter(item=>item.category === 'dessert')
+    const pizza = menu.filter(item=>item.category === 'pizza')
+    const salad = menu.filter(item=>item.category === 'salad')
+    const soup = menu.filter(item=>item.category === 'soup')
     return (
         <div>
             <Helmet>
                 <title className="text-xl font-bold font-[Cinzel] text-[#FFFFFF]">BISTRO BOSS | MENU</title>
             </Helmet>
             <MenuCover img={cover} title='OUR MENU' subTitle='Would you like to try a dish?'></MenuCover>
-            {/* <PopularMenu ></PopularMenu>
-            
-            <MenuCover img={cover} title='DESSERTS' subTitle='Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'></MenuCover>
-            <PopularMenu ></PopularMenu>
-
-            <MenuCover img={cover} title='PIZZA' subTitle='Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'></MenuCover>
-            <PopularMenu ></PopularMenu>
-
-            <MenuCover img={cover} title='SALADS' subTitle='Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'></MenuCover>
-            <PopularMenu ></PopularMenu> */}
+            <SectionTitle  subTitle="Don't miss" title="TODAY'S OFFER"></SectionTitle>
+            <MenuCategory items={offer}></MenuCategory>
+            <MenuCategory title={'DESSERTS'} img={Dessert} items={dessert}></MenuCategory>
+            <MenuCategory title={'PIZZA' }img={Pizza} items={pizza}></MenuCategory>
+            <MenuCategory title={'SALAD'} img={Salad} items={salad}></MenuCategory>
+            <MenuCategory title={'SOUP' }img={Soup} items={soup}></MenuCategory>
+           
         </div>
     );
 };
