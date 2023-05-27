@@ -8,7 +8,7 @@ const NavItem = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => { 
-                
+
             })
             .catch(error => console.log(error));
     }
@@ -16,6 +16,7 @@ const NavItem = () => {
         <li className=' text-white font-[Inter]'><Link to='/'>Home</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/menu'>Menu</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/order/salad'>Order Food</Link></li>
+        <li className=' text-white font-[Inter]'><Link to='/secret'>secret</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/signup'>SignUp</Link></li>
         
         {

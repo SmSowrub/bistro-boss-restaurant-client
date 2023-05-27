@@ -5,6 +5,8 @@ import Menu from "../Component/Pages/Meno/Menu/Menu";
 import Order from "../Component/Pages/Order/Order/Order";
 import SignUp from "../Component/Pages/Autintication/SiginUp/SignUp";
 import Login from "../Component/Pages/Autintication/Login/Login";
+import Secrate from "../Component/Pages/Secrate/Secrate";
+import PrivateRoute from "./PrivateRoute";
 // import Home from "../Component/Pages/Home/Banner/Home";
 
 const router = createBrowserRouter([
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
                 element:<Order></Order>
             },
             {
+                path:'secret',
+                element:<PrivateRoute><Secrate></Secrate></PrivateRoute>
+            },
+            {
                 path:'/signup',
                 element:<SignUp></SignUp>
             },
@@ -32,6 +38,7 @@ const router = createBrowserRouter([
                 path:'/login',
                 element:<Login></Login>
             },
+
         ]
     }
 ])

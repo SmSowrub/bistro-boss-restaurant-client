@@ -65,9 +65,9 @@ instal : npm install react-hook-form
 path :
 <a href='https://react-hook-form.com/get-started' >https://react-hook-form.com/get-started</a>
 
-13. uses React Simple Captcha
+15.  React private route example
 instal : npm install react-simple-captcha
 path :
-<a href='https://github.com/masroorejaz/react-simple-captcha' >https://github.com/masroorejaz/react-simple-captcha</a>
+<a href='https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx' >https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx</a>
 
 12. 

@@ -1,15 +1,21 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 const Login = () => {
-    const {Login}=useContext(AuthContext)
-    const [disabled, setDisabled]=useState(true)
-    useEffect(()=>{
+    const { Login } = useContext(AuthContext)
+    const [disabled, setDisabled] = useState(true)
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+
+    let from = location.state?.from?.pathname || "/";
+    useEffect(() => {
         loadCaptchaEnginge(6)
-    },[])
+    }, [])
 
     const handleLogin = event => {
         event.preventDefault();
@@ -18,32 +24,33 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         Login(email, password)
-        .then(result=>{
-            const user =result.user
-            console.log(user);
-            Swal.fire({
-                title: 'User Login Successful.',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                }
-            });
-        })
-        .catch(err=>{
-            const errorMessage = err.message;
-            console.log(errorMessage);
-        })
+            .then(result => {
+                const user = result.user
+                console.log(user);
+                Swal.fire({
+                    title: 'User Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate(from, { replace: true });
+            })
+            .catch(err => {
+                const errorMessage = err.message;
+                console.log(errorMessage);
+            })
 
     }
 
-    const handleValidateCaptcha =(e)=>{
-        const user_captcha_value =e.target.value;
-        if(validateCaptcha(user_captcha_value)==true){
+    const handleValidateCaptcha = (e) => {
+        const user_captcha_value = e.target.value;
+        if (validateCaptcha(user_captcha_value) == true) {
             setDisabled(false)
         }
-        else{
+        else {
             setDisabled(true)
         }
         console.log(user_captcha_value);
@@ -80,13 +87,13 @@ const Login = () => {
                                 <label className="label">
                                     <LoadCanvasTemplate />
                                 </label>
-                               
+
                                 <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
 
                             </div>
                             <div className="form-control mt-6">
                                 {/* disabled={disabled} */}
-                                <input disabled={disabled}  className="btn btn-primary" type="submit" value="Login" />
+                                <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
                         <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
