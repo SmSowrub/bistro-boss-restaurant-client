@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../Provider/AuthProvider';
-
+import { FaBeer, FaShoppingCart } from 'react-icons/fa';
 const NavItem = () => {
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
         logOut()
-            .then(() => { 
+            .then(() => {
 
             })
             .catch(error => console.log(error));
@@ -18,16 +18,24 @@ const NavItem = () => {
         <li className=' text-white font-[Inter]'><Link to='/order/salad'>Order Food</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/secret'>secret</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/signup'>SignUp</Link></li>
-        
+        <li className=' text-white font-[Inter]'>
+            <Link to='/'>
+                <button className="btn gap-2">
+                    <FaShoppingCart></FaShoppingCart>
+                    <div className="badge badge-secondary">+0</div>
+                </button>
+            </Link>
+        </li>
+
         {
             user ? <>
-                
+
                 <button onClick={handleLogOut} className="btn btn-ghost  text-white font-[Inter]">LogOut</button>
             </> : <>
-            <li className=' text-white font-[Inter]'><Link to='/Login'>Login</Link></li>
+                <li className=' text-white font-[Inter]'><Link to='/Login'>Login</Link></li>
             </>
         }
-        
+
     </>
     return (
         <div className="navbar rounded fixed z-10 bg-black bg-opacity-30 max-w-screen-lg" >
@@ -51,7 +59,7 @@ const NavItem = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-               { user && <span>{user?.displayName}</span>}
+                {user && <span>{user?.displayName}</span>}
             </div>
         </div>
     );
