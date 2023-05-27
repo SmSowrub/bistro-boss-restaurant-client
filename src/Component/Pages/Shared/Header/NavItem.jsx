@@ -21,7 +21,7 @@ const NavItem = () => {
         
         {
             user ? <>
-                <span>{user?.displayName}</span>
+                
                 <button onClick={handleLogOut} className="btn btn-ghost  text-white font-[Inter]">LogOut</button>
             </> : <>
             <li className=' text-white font-[Inter]'><Link to='/Login'>Login</Link></li>
@@ -51,7 +51,7 @@ const NavItem = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+               { user && <span>{user?.displayName}</span>}
             </div>
         </div>
     );
