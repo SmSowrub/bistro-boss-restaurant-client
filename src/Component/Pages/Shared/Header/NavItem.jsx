@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../../Provider/AuthProvider';
 
 const NavItem = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { 
+                
+            })
+            .catch(error => console.log(error));
+    }
     const menuItem = <>
         <li className=' text-white font-[Inter]'><Link to='/'>Home</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/menu'>Menu</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/order/salad'>Order Food</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/signup'>SignUp</Link></li>
-        <li className=' text-white font-[Inter]'><Link to='/Login'>Login</Link></li>
+        
+        {
+            user ? <>
+                <span>{user?.displayName}</span>
+                <button onClick={handleLogOut} className="btn btn-ghost  text-white font-[Inter]">LogOut</button>
+            </> : <>
+            <li className=' text-white font-[Inter]'><Link to='/Login'>Login</Link></li>
+            </>
+        }
         
     </>
     return (

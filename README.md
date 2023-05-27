@@ -60,4 +60,14 @@ instal : npm install react-simple-captcha
 path :
 <a href='https://github.com/masroorejaz/react-simple-captcha' >https://github.com/masroorejaz/react-simple-captcha</a>
 
+14. uses React hook from error vilidation 
+instal : npm install react-hook-form
+path :
+<a href='https://react-hook-form.com/get-started' >https://react-hook-form.com/get-started</a>
+
+13. uses React Simple Captcha
+instal : npm install react-simple-captcha
+path :
+<a href='https://github.com/masroorejaz/react-simple-captcha' >https://github.com/masroorejaz/react-simple-captcha</a>
+
 12. 
