@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import { FaBeer, FaShoppingCart } from 'react-icons/fa';
+import UseCart from '../../../../Hooks/UseCart';
 const NavItem = () => {
     const { user, logOut } = useContext(AuthContext);
-
+    const {cart} = UseCart()
     const handleLogOut = () => {
         logOut()
             .then(() => {
@@ -22,7 +23,7 @@ const NavItem = () => {
             <Link to='/'>
                 <button className="btn gap-2">
                     <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-secondary">+0</div>
+                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
                 </button>
             </Link>
         </li>

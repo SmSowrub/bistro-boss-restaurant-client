@@ -69,5 +69,13 @@ path :
 instal : npm install react-simple-captcha
 path :
 <a href='https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx' >https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx</a>
+16.  use tanstack query
+instal :npm i @tanstack/react-query
+path :
+<a href='https://tanstack.com/query/latest/docs/react/installation' >https://tanstack.com/query/latest/docs/react/installation</a>
+15.  React private route example
+instal : npm install react-simple-captcha
+path :
+<a href='https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx' >https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx</a>
 
 12. 
