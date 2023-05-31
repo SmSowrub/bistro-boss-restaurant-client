@@ -28,11 +28,8 @@ const SocialLogin = () => {
 
                 })
                     .then(res => res.json())
-                    .then(data => {
-                        if (data.insertedId) {
-                            
-                            navigate(from, { replace: true });
-                        }
+                    .then(()=> {                        
+                            navigate(from, { replace: true });                   
                     })
 
 
@@ -42,7 +39,7 @@ const SocialLogin = () => {
     return (
         <div>
             <div className="divider"></div>
-            <div className='w-full text-center'>
+            <div className='w-full text-center my-4'>
                 <button className="btn btn-circle btn-outline ">
                     <FaGoogle onClick={handleGoogleSignin}></FaGoogle>
                 </button>

@@ -9,6 +9,7 @@ import Secrate from "../Component/Pages/Secrate/Secrate";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import MyCart from "../Component/Pages/DashBoard/MyCart/MyCart";
+import AllUser from "../Component/Pages/DashBoard/AllUser/AllUser";
 // import Home from "../Component/Pages/Home/Banner/Home";
 
 const router = createBrowserRouter([
@@ -50,7 +51,11 @@ const router = createBrowserRouter([
             {
                 path: 'mycart',
                 element: <MyCart></MyCart>
-            }
+            },
+            {
+                path: 'allusers',
+                element: <AllUser></AllUser>
+            },
         ]
         }
 
