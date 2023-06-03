@@ -5,7 +5,7 @@ import { FaBeer, FaShoppingCart } from 'react-icons/fa';
 import UseCart from '../../../../Hooks/UseCart';
 const NavItem = () => {
     const { user, logOut } = useContext(AuthContext);
-    const {cart} = UseCart()
+    const [cart] = UseCart()
     const handleLogOut = () => {
         logOut()
             .then(() => {

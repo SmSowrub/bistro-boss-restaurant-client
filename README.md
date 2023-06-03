@@ -73,9 +73,14 @@ path :
 instal :npm i @tanstack/react-query
 path :
 <a href='https://tanstack.com/query/latest/docs/react/installation' >https://tanstack.com/query/latest/docs/react/installation</a>
-15.  React private route example
-instal : npm install react-simple-captcha
+
+17. jwt->json web tokin
+instal : $ npm install jsonwebtoken
 path :
-<a href='https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx' >https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx</a>
+<a href='https://github.com/auth0/node-jsonwebtoken' >https://github.com/auth0/node-jsonwebtokenx</a>
+18. axios
+instal : npm install axios
+path :
+<a href='https://axios-http.com/docs/intro' >https://axios-http.com/docs/intro</a>
 
 12. 
