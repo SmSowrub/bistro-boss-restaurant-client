@@ -20,7 +20,7 @@ const NavItem = () => {
         <li className=' text-white font-[Inter]'><Link to='/secret'>secret</Link></li>
         <li className=' text-white font-[Inter]'><Link to='/signup'>SignUp</Link></li>
         <li className=' text-white font-[Inter]'>
-            <Link to='/'>
+            <Link to="/dashboard/mycart">
                 <button className="btn gap-2">
                     <FaShoppingCart></FaShoppingCart>
                     <div className="badge badge-secondary">+{cart?.length || 0}</div>
